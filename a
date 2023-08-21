@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feuchtigkeitsmessung</title>
+</head>
+<body>
+    <h1>Feuchtigkeitsmessung</h1>
+    <p>Feuchtigkeitswert: <span id="feuchtigkeitswert">Warte auf Daten...</span></p>
+
+    <script>
+        function updateFeuchtigkeitswert(feuchtigkeitswert) {
+            document.getElementById("feuchtigkeitswert").textContent = feuchtigkeitswert + "%";
+        }
+
+        function fetchFeuchtigkeitswert() {
+            // Hier AJAX-Anfrage an deine ESP8266-Endpunkt-URL
+            // Zum Beispiel mit fetch() oder XMLHttpRequest
+            // und dann updateFeuchtigkeitswert aufrufen
+        }
+
+        // Initialer Aufruf
+        fetchFeuchtigkeitswert();
+        // Periodischer Aufruf alle 10 Sekunden
+        setInterval(fetchFeuchtigkeitswert, 10000);
+    </script>
+</body>
+</html>
